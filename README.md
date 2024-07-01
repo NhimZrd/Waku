@@ -1,4 +1,4 @@
-# WakuNode
+# Waku
 
 **Disassembly of the Waku project + node installation instructions.**
 
