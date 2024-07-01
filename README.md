@@ -33,12 +33,11 @@ The project has a Github, which contains instructions on how to install the node
 
 1. open a program to connect to your rented server, connect to it. The first command is to update the server software: ``sudo apt update && sudo apt upgrade -y```.
 2. Install the necessary utilities:
-   ```apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev -y`` ``
+   ``apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev -y``
 4. Install Docker: ``sudo apt install docker.io`` . During the installation process, confirm everything by pressing Y.
 5. After installation, check the Docker version with the command: ``docker --version``. It is necessary that the Docker version is at least version 24.0.5.
 6. Install Docker Compose with the command:
-      ``sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-$(uname -s)-$(uname -m)"``
--o /usr/local/bin/docker-compose
+   ``sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose``
 
 7.Execute the command: ``sudo chmod +x /usr/local/bin/docker-compose``.
 8.Check the version of Docker Compose with the command: ``docker-compose --version``. It is necessary that the Docker Compose version is at least version 2.24.5.
