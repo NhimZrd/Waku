@@ -53,9 +53,9 @@ The project has a Github, which contains instructions on how to install the node
     **WARNING: As it turns out, a large amount of ETH Sepolia does not play a role in the operation of Waku node. You just need to have at least 0.1 ETH Sepolia in your wallet to ensure that the node works properly.
 17. ETH Sepolia has been obtained and the application in Alchemy has been created.Now we need to change the config of the Waku node on the server.Let's run the command: ``cp .env.example .env``.
 18. Next, run the command: ``nano .env``
-18.Set new parameters in the config. You can navigate through the file using the arrows on the keyboard. In the "ETH_CLIENT_ADDRESS" field insert your link from the Alchemy application (see point 15). In the "ETH_TESTNET_KEY" field, enter the private key of your Ethereum Sepolia wallet.In the "RLN_RELAY_CRED_PASSWORD" field, think of and enter a password.
+18. Set new parameters in the config. You can navigate through the file using the arrows on the keyboard. In the "ETH_CLIENT_ADDRESS" field insert your link from the Alchemy application (see point 15). In the "ETH_TESTNET_KEY" field, enter the private key of your Ethereum Sepolia wallet.In the "RLN_RELAY_CRED_PASSWORD" field, think of and enter a password.
 **FILL THE DATA IN THE CONFIG CAREFULLY, DO NOT ALLOW EXTRA QUOTES, SPACES AND OTHER SYMBOLS!DO IT AS THE PHOTO:** ![image](https://github.com/Mozgiii9/Waku/assets/74683169/fe785805-d3c3-4b16-9dbf-fcbe0f4ca126)
-19.After making changes to the .env file you need to save it.To do this, press CTRL + X, then press Y, then press Enter on your keyboard.The changes should be saved.
+19. After making changes to the .env file you need to save it.To do this, press CTRL + X, then press Y, then press Enter on your keyboard.The changes should be saved.
 21. Enter the command: ``./register_rln.sh`` and wait for it to complete. There may be an error, do not pay attention. Noda should still work.
 22. Open ports. To do this, enter the commands one by one:
 
