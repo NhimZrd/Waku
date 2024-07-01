@@ -1,1 +1,52 @@
 # Waku
+
+**Disassembly of the Waku project + node installation instructions.**
+
+**Plan:**
+- About the project;
+- Investor disassembly;
+- Server requirements;
+- Node installation instructions;
+- Conclusions
+
+Waku is a set of messaging protocols designed for a decentralized network. It allows users to communicate with each other without the need for centralized intermediaries, while providing private and secure communication. It is important to note that Waku is part of a larger initiative to create a decentralized internet. Its main goal is to give users more control over their communication in the online environment and reduce the influence of large corporations on the internet.
+
+Vitalik Buterin recognized Waku as the successor to Whisper, the original messaging protocol on the Ethereum network. In his blog titled "Make Ethereum Cypherpunk Again," Vitalik discusses the broader technological vision within which Ethereum exists and supports Waku as an implementation of the decentralized messaging protocol conceived by Gavin Wood.
+
+Buterin directly supports the project, and this already says a lot. Let's go through Waku's social media accounts:
+On Twitter, representatives of such Tier-1 funds as **Delphi Digital(invested in Celestia), Paradigm(invested in Blast, Uniswap), a16z(invested in EigenLayer) are subscribed to the project.** Vitalik himself is also subscribed to the account, which once again confirms his involvement in the project. Almost 5 thousand people are subscribed to the account (date of writing the review: March 15, 2024).
+
+The Discord of the project does not have a large number of participants and serves more as a platform to help users.
+
+The project has a Github, which contains instructions on how to install the node in various ways and various material for developers. The nwaku node on GitHub has shown continuous progress, with 46 releases since November 2020, indicating continuous improvement efforts from a strong development team. Also, Waku has a beautiful and simple website that is easy to interact with and contains all the information you need to familiarize yourself with the project in English.
+
+**Let's move on to the Waku node installation instructions.**
+**System requirements for VPS server:**
+- 2 GB RAM or more;
+- 2 CPU cores or more;
+- 60 GB SSD or more;
+- Ubuntu 20.04
+- 
+**You will also need a wallet that holds at least 0.1 Ethereum Sepolia. This is necessary to enable transactions on the network. + Register an account with Alchemy. For this node, I strongly recommend creating a new wallet and saving the data from it in a secret place.
+
+**Detailed instructions for installing the node:**
+
+1. open a program to connect to your rented server, connect to it. The first command is to update the server software: ``sudo apt update && sudo apt upgrade -y```.
+2. Install the necessary utilities:
+   ```apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev -y`` ``
+4. Install Docker: ``sudo apt install docker.io`` . During the installation process, confirm everything by pressing Y.
+5. After installation, check the Docker version with the command: ``docker --version``. It is necessary that the Docker version is at least version 24.0.5.
+6. Install Docker Compose with the command:
+      ``sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-$(uname -s)-$(uname -m)"``
+-o /usr/local/bin/docker-compose
+
+7.Execute the command: ``sudo chmod +x /usr/local/bin/docker-compose``.
+8.Check the version of Docker Compose with the command: ``docker-compose --version``. It is necessary that the Docker Compose version is at least version 2.24.5.
+9.Download the Waku node software to the server: ``git clone https://github.com/waku-org/nwaku-compose``.
+10. Change the directory: ``cd nwaku-compose``.
+11. Now we need to go to [Alchemy](https://dashboard.alchemy.com/) and create a new application there, with the help of which we will be able to monitor the node's operability. To do this, log in to Alchemy and go to the "Apps" section:    ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/b8f19c3a-62f0-49f0-a1a6-40099d4a2779)
+12. Create a new app by clicking on the "+ Create new app" button:    ![изображение](https://github.com/Mozgiii9/Waku/assets/74683169/6b076e3a-d121-4554-b444-8dbfc19448dd)
+13. Select the Ethereum Sepolia network as in the picture. Also set a name for the app and add a description to the app if necessary:
+    ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/218b9846-43fa-4816-8e24-ec5e8c39e6ad)
+14. Now here we need the following parameter: API key -> HTTPS line. In the future we will insert this in the Waku node config:
+    ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/83c7cdd4-9a47-4dbe-9aed-8e5a5cea45a3)
