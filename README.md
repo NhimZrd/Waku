@@ -22,11 +22,12 @@ The project has a Github, which contains instructions on how to install the node
 
 **Let's move on to the Waku node installation instructions.**
 **System requirements for VPS server:**
+
 - 2 GB RAM or more;
 - 2 CPU cores or more;
 - 60 GB SSD or more;
 - Ubuntu 20.04
-- 
+
 **You will also need a wallet that holds at least 0.1 Ethereum Sepolia. This is necessary to enable transactions on the network. + Register an account with Alchemy. For this node, I strongly recommend creating a new wallet and saving the data from it in a secret place.**
 
 **Detailed instructions for installing the node:**
@@ -43,7 +44,7 @@ The project has a Github, which contains instructions on how to install the node
 8.Check the version of Docker Compose with the command: ``docker-compose --version``. It is necessary that the Docker Compose version is at least version 2.24.5.
 9.Download the Waku node software to the server: ``git clone https://github.com/waku-org/nwaku-compose``.
 10. Change the directory: ``cd nwaku-compose``.
-11. Now we need to go to [Alchemy](https://dashboard.alchemy.com/) and create a new application there, with the help of which we will be able to monitor the node's operability. To do this, log in to Alchemy and go to the "Apps" section:    ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/b8f19c3a-62f0-49f0-a1a6-40099d4a2779)
+11. Now we need to go to [Alchemy](https://dashboard.alchemy.com/) and create a new application there, with the help of which we will be able to monitor the node's operability. To do this, log in to Alchemy and go to the "Apps" section.
 12. Create a new app by clicking on the "+ Create new app" button:    ![изображение](https://github.com/Mozgiii9/Waku/assets/74683169/6b076e3a-d121-4554-b444-8dbfc19448dd)
 13. Select the Ethereum Sepolia network as in the picture. Also set a name for the app and add a description to the app if necessary:
     ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/218b9846-43fa-4816-8e24-ec5e8c39e6ad)
