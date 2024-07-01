@@ -27,11 +27,11 @@ The project has a Github, which contains instructions on how to install the node
 - 60 GB SSD or more;
 - Ubuntu 20.04
 - 
-**You will also need a wallet that holds at least 0.1 Ethereum Sepolia. This is necessary to enable transactions on the network. + Register an account with Alchemy. For this node, I strongly recommend creating a new wallet and saving the data from it in a secret place.
+**You will also need a wallet that holds at least 0.1 Ethereum Sepolia. This is necessary to enable transactions on the network. + Register an account with Alchemy. For this node, I strongly recommend creating a new wallet and saving the data from it in a secret place.**
 
 **Detailed instructions for installing the node:**
 
-1. open a program to connect to your rented server, connect to it. The first command is to update the server software: ``sudo apt update && sudo apt upgrade -y```.
+1. open a program to connect to your rented server, connect to it. The first command is to update the server software: ``sudo apt update && sudo apt upgrade -y``.
 2. Install the necessary utilities:
    ``apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev -y``
 4. Install Docker: ``sudo apt install docker.io`` . During the installation process, confirm everything by pressing Y.
