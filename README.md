@@ -73,9 +73,9 @@ The project has a Github, which contains instructions on how to install the node
 
 ``sudo ufw allow 30304`` libp2p communication
 
-23. Final command, run node: ``docker-compose up -d`` . Your terminal should look something like this:
+18. Final command, run node: ``docker-compose up -d`` . Your terminal should look something like this:
 ![изображение](https://github.com/Mozgiii9/Waku/assets/74683169/0d05e8d8-840d-4b58-a696-9a7f6f19e910)
-24. Check your application in Alchemy. It should display the metrics there:
+19. Check your application in Alchemy. It should display the metrics there:
 ![изображение](https://github.com/Mozgiii9/Waku/assets/74683169/f425b78d-7012-40cc-bbad-4f7cb6ee6799)
 
 If you have done everything correctly, your Waku node should be working properly. You can monitor its performance in Alchemy under "Apps".
