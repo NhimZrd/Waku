@@ -50,3 +50,39 @@ The project has a Github, which contains instructions on how to install the node
     ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/218b9846-43fa-4816-8e24-ec5e8c39e6ad)
 14. Now here we need the following parameter: API key -> HTTPS line. In the future we will insert this in the Waku node config:
     ![rrrrrrrrrr](https://github.com/Mozgiii9/Waku/assets/74683169/83c7cdd4-9a47-4dbe-9aed-8e5a5cea45a3)
+15. Now we need to get test Ethereum Sepolia. Faucet links: [1](https://sepoliafaucet.com/),[2](https://www.infura.io/faucet/sepolia),[3](https://sepolia-faucet.pk910.de/).Go to any convenient faucet, get Ethereum Sepolia.The [official documentation](https://docs.waku.org/guides/nwaku/run-docker-compose) for setting up the Waku node states that you will need at least 0.1 ETH Sepolia.**WARNING: As it turns out, a large amount of ETH Sepolia does not play a role in the operation of Waku node. You just need to have at least 0.1 ETH Sepolia in your wallet to ensure that the node works properly.
+16. ETH Sepolia has been obtained and the application in Alchemy has been created.Now we need to change the config of the Waku node on the server.Let's run the command: ``cp .env.example .env``.
+17. Next, run the command: ``nano .env``
+18.Set new parameters in the config. You can navigate through the file using the arrows on the keyboard. In the "ETH_CLIENT_ADDRESS" field insert your link from the Alchemy application (see point 15). In the "ETH_TESTNET_KEY" field, enter the private key of your Ethereum Sepolia wallet.In the "RLN_RELAY_CRED_PASSWORD" field, think of and enter a password.**FILL THE DATA IN THE CONFIG CAREFULLY, DO NOT ALLOW EXTRA QUOTES, SPACES AND OTHER SYMBOLS!DO IT AS THE PHOTO:** ![image](https://github.com/Mozgiii9/Waku/assets/74683169/fe785805-d3c3-4b16-9dbf-fcbe0f4ca126)
+19.After making changes to the .env file you need to save it.To do this, press CTRL + X, then press Y, then press Enter on your keyboard.The changes should be saved.
+21. Enter the command: ``./register_rln.sh`` and wait for it to complete. There may be an error, do not pay attention. Noda should still work.
+22. Open ports. To do this, enter the commands one by one:
+
+``sudo ufw enable``;
+
+``sudo ufw allow 22``# SSH access;
+
+``sudo ufw allow 3000``# Grafana dashboard;
+
+``sudo ufw allow 8545``# Ethereum JSON-RPC;
+
+``sudo ufw allow 8645``# Waku REST API;
+
+``sudo ufw allow 9005``# discv5 routine;
+
+``sudo ufw allow 30304`` libp2p communication
+
+22. Final command, run node: ``docker-compose up -d`` . Your terminal should look something like this:
+![изображение](https://github.com/Mozgiii9/Waku/assets/74683169/0d05e8d8-840d-4b58-a696-9a7f6f19e910)
+23. Check your application in Alchemy. It should display the metrics there:
+![изображение](https://github.com/Mozgiii9/Waku/assets/74683169/f425b78d-7012-40cc-bbad-4f7cb6ee6799)
+
+If you have done everything correctly, your Waku node should be working properly. You can monitor its performance in Alchemy under "Apps".
+
+**Conclusions:**
+- The project has strong Tier-1 investors;
+- Vitalik Buterin is a Twitter follower of the project and is likely an investor as well;
+- The project actively interacts with the Ethereum ecosystem;
+- Interesting idea that the project realizes;
+- Developers are actively working on the project(46 updates since Nov 2020);
+- Roadmap for 2024 indicates plans to incentivize operators, suggesting an innovative approach to attracting and expanding the community(Possible airdrop for node runners?).
